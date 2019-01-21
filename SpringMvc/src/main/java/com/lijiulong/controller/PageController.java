@@ -2,19 +2,20 @@ package com.lijiulong.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
+@RequestMapping("/page")
 public class PageController {
 
-
-    @RequestMapping(value = "/index")
-    public String success(HttpServletRequest request, HttpServletResponse response) {
-        return "/success";
+    @RequestMapping("/index")
+    public String success(Model model) {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("success");
+        mav.addObject("msg","success");
+        return "success";
     }
 }

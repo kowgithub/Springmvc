@@ -1,7 +1,8 @@
-com\lijiulong\controller\UserController.class
-com\lijiulong\controller\JsonController.class
-com\lijiulong\model\User.class
 com\lijiulong\service\UserService.class
-com\lijiulong\service\impl\IUserService.class
+com\lijiulong\controller\JsonController.class
 com\lijiulong\controller\PageController.class
+com\lijiulong\model\User.class
 com\lijiulong\dao\UserMapper.class
+com\lijiulong\controller\UserController.class
+com\lijiulong\controller\ModelController.class
+com\lijiulong\service\impl\IUserService.class
