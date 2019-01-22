@@ -6,6 +6,7 @@ import com.lijiulong.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +19,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * of use httpservletrequest.getparameter来获取id参数
+     *
+     * @param id
+     * @return
+     */
     @ResponseBody
     @RequestMapping("/getuser")
-    public User getUser(HttpServletRequest request, HttpServletResponse response){
-        return userService.getUserById(Integer.parseInt(request.getParameter("id")));
+    public User getUser(@RequestParam int id){
+        return userService.getUserById(id);
     }
 }
